@@ -11,6 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= import js/jquery-migrate
+//= require jquery_ujs
 //= require turbolinks
-//= require_self .
+//= require_tree .

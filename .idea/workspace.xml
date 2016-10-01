@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd96f09d-cb55-4dfd-b80a-d69081893e42" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/suppliers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/suppliers_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="myadmin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,7 +105,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suppliers_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="suppliers_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/suppliers_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -167,12 +166,12 @@
         <option value="$PROJECT_DIR$/app/controllers/style_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/supplier/index.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/agents_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/brands_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/buyers_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/styles_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/suppliers_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -744,12 +743,12 @@
       <updated>1475241820170</updated>
       <workItem from="1475241837438" duration="1609000" />
       <workItem from="1475249719547" duration="3780000" />
-      <workItem from="1475255430109" duration="25527000" />
+      <workItem from="1475255430109" duration="26359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30916000" />
+    <option name="totallyTimeSpent" value="31748000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1103,14 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/supplier/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1175,15 +1166,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/agents_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/suppliers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/brands_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/styles_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
@@ -1199,7 +1190,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/styles_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/brands_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
@@ -1207,10 +1198,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/suppliers_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/agents_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>

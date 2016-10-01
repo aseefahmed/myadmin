@@ -11,8 +11,18 @@
  * file per style scope.
  *
  *= require bootstrap/css/bootstrap.min
+ *= require lib/jquery-ui/css/Aristo/Aristo
+ *= require lib/jBreadcrumbs/css/BreadCrumb
+ *= require lib/qtip2/jquery.qtip.min
+ *= require lib/colorbox/colorbox.css
+ *= require lib/google-code-prettify/prettify
+ *= require lib/sticky/sticky
+ *= require img/splashy/splashy
+ *= require img/flags/flags.css
  *= require lib/datatables/dataTables.bootstrap.min
+ *= require lib/datatables/extras/TableTools/media/css/TableTools
  *= require style
  *= require blue
  *= require_self
  */
+

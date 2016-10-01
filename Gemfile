@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 ruby '2.2.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.1'
+gem 'rails', '5.0.0.1'
+gem 'actionpack', '5.0.0.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -41,12 +42,7 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
-group :development, :production do
-  # Use mysql as the database for Active Record
-  gem 'mysql2', '>= 0.3.13', '< 0.5'
-end
-
-group :production do
+group :development, :production, :test do
   gem 'pg'
 end
 

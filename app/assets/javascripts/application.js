@@ -13,4 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require lib/datatables/jquery.dataTables.min
+//= require lib/datatables/extras/Scroller/media/js/dataTables.scroller.min
+//= require lib/datatables/extras/TableTools/media/js/TableTools.min
 //= require bootstrap/js/bootstrap.min
+//= require_self
+
+var ready;
+ready = function(){
+    $('#data-table').dataTable();
+}
+
+$(document).ready(ready);
+

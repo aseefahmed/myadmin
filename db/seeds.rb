@@ -5,12 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-100.times do |x|
-  Order.create([{supplier: x}])
-  # Supplier.create([{supplier_name: Faker::Company.name}])
-  # Buyer.create([{supplier_name: Faker::Company.name}])
-  # Brand.create([{supplier_name: Faker::Company.name}])
-  # Agent.create([{supplier_name: Faker::Company.name}])
-  # Style.create([{supplier_name: Faker::Company.name}])
-end

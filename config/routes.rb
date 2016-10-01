@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :brands
   resources :styles
 
-  root to: 'Orders#index'
+  root 'Orders#index'
 
 end

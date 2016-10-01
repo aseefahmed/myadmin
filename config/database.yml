@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: myadmin_production
-  username: myadmin
-  password: <%= ENV['MYADMIN_DATABASE_PASSWORD'] %>
+  database: d3jhu2mp8g461m
+  username: flwbcvxgnfcyuj
+  password: xW6hIoMpu8f-W-_-H317BekVtX

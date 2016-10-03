@@ -231,7 +231,56 @@
   </header>
   <div id="contentwrapper">
     <div class="main_content">
-      <%= yield %>
+      <div id="jCrumbs" class="breadCrumb module">
+        <ul>
+          <li>
+            <a href="#"><i class="glyphicon glyphicon-home"></i></a>
+          </li>
+          <li>
+            <a href="#">Production</a>
+          </li>
+          <li>
+            <a href="#">Orders</a>
+          </li>
+          <li>
+            Suppliers List
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <%= yield %>
+        </div>
+        <div class="col-md-4">
+          <div class="tabbable tabbable-bordered">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_br1" data-toggle="tab">New Orders</a></li>
+              <li><a href="#tab_br2" data-toggle="tab">Inactive Orders</a></li>
+              <li><a href="#tab_br3" data-toggle="tab">Requisitions</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab_br1">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+                </p>
+              </div>
+              <div class="tab-pane" id="tab_br2">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+                </p>
+              </div>
+              <div class="tab-pane" id="tab_br3">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -306,8 +355,36 @@
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
+            <a href="#styles" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+              <i class="glyphicon glyphicon-glass"></i> Styles
+            </a>
+          </div>
+          <div class="accordion-body collapse" id="styles">
+            <div class="panel-body">
+              <ul class="nav nav-pills nav-stacked">
+                <li><%= link_to 'View Styles', styles_path  %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#agents" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+              <i class="glyphicon glyphicon-lock"></i> Agents
+            </a>
+          </div>
+          <div class="accordion-body collapse" id="agents">
+            <div class="panel-body">
+              <ul class="nav nav-pills nav-stacked">
+                <li><%= link_to 'View Agents', agents_path  %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
             <a href="#Reports" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-              <i class="glyphicon glyphicon-cog"></i> Reports
+              <i class="glyphicon glyphicon-list"></i> Reports
             </a>
           </div>
           <div class="accordion-body collapse" id="Reports">

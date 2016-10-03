@@ -3723,6 +3723,10 @@ fieldset[disabled] .btn-link:focus {
     padding-right: 0
 }
 
+.btn-block+.btn-block {
+    margin-top: 5px
+}
+
 input[type=submit].btn-block,
 input[type=reset].btn-block,
 input[type=button].btn-block {

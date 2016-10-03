@@ -10,7 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap/css/bootstrap
+ *= require lib/bootstrap/css/bootstrap.min
+ *= require lib/jquery-ui/jquery-ui.theme.min
  *= require lib/jquery-ui/css/Aristo/Aristo
  *= require lib/jBreadcrumbs/css/BreadCrumb
  *= require lib/qtip2/jquery.qtip.min
@@ -19,7 +20,7 @@
  *= require lib/sticky/sticky
  *= require img/splashy/splashy
  *= require img/flags/flags
- *= require lib/datatables/extras/TableTools/media/css/TableTools
+ *= require lib/select2/select2
  *= require style
  *= require blue
  *= require_self

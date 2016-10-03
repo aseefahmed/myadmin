@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require lib/jquery-ui/jquery-ui-1.10.0.custom.min
 //= require turbolinks
 //= require bootstrap/js/bootstrap.min
 //= require lib/datatables/jquery.dataTables.min
@@ -19,28 +20,30 @@
 //= require lib/datatables/extras/TableTools/media/js/TableTools.min
 //= require lib/datatables/extras/TableTools/media/js/ZeroClipboard
 //= require lib/datatables/jquery.dataTables.bootstrap.min
-
+//= require lib/select2/select2
+//= require lib/fileinput/fileinput.min
 //= require_self
 
 var ready;
 ready = function(){
     $('#data-table').dataTable({
+        "bDestroy": true,
         "sPaginationType": "bootstrap",
+        dom: 'Bfrtip',
         "sDom": "<'row'<'col-sm-4'l><'col-sm-4 text-right'T><'col-sm-4'f>r>t<'row'<'col-sm-5'i><'col-sm-7'p>>",
-        "oTableTools": {
-            "aButtons": [
-                "copy",
-                "print",
-                {
-                    "sExtends":    "collection",
-                    "sButtonText": 'Save <span class="caret" />',
-                    "aButtons":    [ "csv", "xls", "pdf" ]
-                }
-            ],
-            "sSwfPath": "lib/datatables/extras/TableTools/media/swf/copy_csv_xls_pdf.swf"
-        }
-    });;
+        buttons: [
+            'copy', 'excel', 'pdf'
+        ]
+    });
+
+    $('.s1').select2();
+
+    $('.file-upload').fileinput({
+        showUpload: false,
+        previewFileType: "image",
+    });
 }
 
 $(document).ready(ready);
+$(document).on('turbolinks:load', ready);
 

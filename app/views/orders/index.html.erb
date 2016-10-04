@@ -69,6 +69,7 @@
       </div>
       <div class="modal-body">
         <%= form_for @order, url: {action: "create"}, html: {multipart: true} do |f| %>
+            <%= f.hidden_field :compositions  %>
             <div class="formSep">
               <div class="row">
                 <div class="col-sm-6">
@@ -109,6 +110,36 @@
                 </div>
               </div>
             </div>
+
+            <div class="formSep bg-warning">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 class="heading">Composition</h3>
+                </div>
+                <div class="col-sm-3">
+                  <label class="text-center">Name</label>
+                  <input class="form-control" name="composition_name"  id="composition_name" type="text" placeholder="Name">
+                </div>
+                <div class="col-sm-3">
+                  <label>Percentage</label>
+                  <input class="form-control" name="composition_percentage" id="composition_percentage" type="number" placeholder="Percentage">
+                </div>
+                <div class="col-sm-2">
+                  <label>Yarn Rate</label>
+                  <input class="form-control" name="composition_yarn_rate" id="composition_yarn_rate" type="number" placeholder="Cost">
+                </div>
+                <div class="col-sm-2">
+                  <label>Wastage(%)</label>
+                  <input class="form-control" name="composition_wastage" id="composition_wastage" type="number" placeholder="Wastage">
+                </div>
+                <div class="col-sm-2">
+                  <a class="btn btn-success" id="composition_plus"><i class="glyphicon glyphicon-plus"></i></a>
+                  <a class="btn btn-primary" id="composition_refresh"><i class="glyphicon glyphicon-refresh"></i></a>
+                </div>
+                <div id="composition-div-group">
+              </div>
+            </div>
+
             <div class="formSep">
               <div class="row">
                 <div class="col-sm-3">
@@ -173,19 +204,19 @@
               <div class="row">
                 <div class="col-sm-3">
                   <label>Total FOB</label>
-                  <%= f.text_field :zipper_cost, class: "form-control", disabled:true, placeholder: "Total FOB"  %>
+                  <%= f.text_field :total_fob, class: "form-control", disabled:true, placeholder: "Total FOB"  %>
                 </div>
                 <div class="col-sm-3">
                   <label>Total Cost</label>
-                  <%= f.text_field :total_zipper_cost, class: "form-control", disabled:true, placeholder: "Total Cost"  %>
+                  <%= f.text_field :total_cost, class: "form-control", disabled:true, placeholder: "Total Cost"  %>
                 </div>
                 <div class="col-sm-3">
                   <label>Balance Amount</label>
-                  <%= f.text_field :print_cost, class: "form-control", disabled:true, placeholder: "Balance Amount"  %>
+                  <%= f.text_field :balance_amount, class: "form-control", disabled:true, placeholder: "Balance Amount"  %>
                 </div>
                 <div class="col-sm-3">
                   <label>Cost of Making</label>
-                  <%= f.text_field :total_print_cost, class: "form-control", disabled:true, disabled:true, placeholder: "Cost of Making"  %>
+                  <%= f.text_field :cost_of_making, class: "form-control", disabled:true, disabled:true, placeholder: "Cost of Making"  %>
                 </div>
               </div>
             </div>

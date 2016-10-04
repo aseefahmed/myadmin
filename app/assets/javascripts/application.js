@@ -39,11 +39,100 @@ ready = function(){
 
     $('.select2js').select2();
 
-    $('.inputmaskjs').inputmask("mm/dd/yyyy");
+    $('.inputmaskjs').inputmask("yyyy-mm-dd");
 
     $('.file-upload').fileinput({
         showUpload: false,
         previewFileType: "image",
+    });
+
+    $("#order_qty").blur(function(e){
+        order_qty_per_dzn = Math.round($("#order_qty").val()/12*100, 2);
+        order_qty_per_dzn = order_qty_per_dzn/100;
+        $("#order_qty_per_dzn").val(order_qty_per_dzn);
+
+        fob = $("#order_fob").val();
+        qty = $("#order_qty").val();
+        total = fob*qty;
+        order_total_fob = $("#order_total_fob").val(total);
+    });
+
+    $("#order_acc_rate").blur(function(e){
+        rate = $("#order_acc_rate").val();
+        order_qty_per_dzn = $("#order_qty_per_dzn").val();
+        total_rate = Math.round(rate * order_qty_per_dzn);
+        $("#order_total_acc_cost").val(total_rate);
+    });
+
+    $("#order_btn_cost").blur(function(e){
+        rate = $("#order_btn_cost").val();
+        order_qty_per_dzn = $("#order_qty_per_dzn").val();
+        total_rate = Math.round(rate * order_qty_per_dzn);
+        $("#order_total_btn_cost").val(total_rate);
+    });
+
+    $("#order_zipper_cost").blur(function(e){
+        rate = $("#order_zipper_cost").val();
+        order_qty_per_dzn = $("#order_qty_per_dzn").val();
+        total_rate = Math.round(rate * order_qty_per_dzn);
+        $("#order_total_zipper_cost").val(total_rate);
+    });
+
+    $("#order_print_cost").blur(function(e){
+        rate = $("#order_print_cost").val();
+        order_qty_per_dzn = $("#order_qty_per_dzn").val();
+        total_rate = Math.round(rate * order_qty_per_dzn);
+        $("#order_total_print_cost").val(total_rate);
+    });
+
+    $("#order_fob").blur(function(e){
+        fob = $("#order_fob").val();
+        qty = $("#order_qty").val();
+        total = fob*qty;
+        $("#order_total_fob").val(total);
+
+    });
+
+
+    order_total_yarn_weight = 0;
+    order_total_yarn_cost = 0;
+    compositions = new Array()
+    n=0;
+    $('#composition_plus').click(function(){
+        composition_name = $('#composition_name').val();
+        composition_percentage = $('#composition_percentage').val();
+        composition_yarn_rate = $('#composition_yarn_rate').val();
+        composition_wastage = $('#composition_wastage').val();
+        compositions[n] = [composition_name, composition_percentage, composition_yarn_rate, composition_wastage];
+
+        composition_str = JSON.stringify(compositions);
+        alert(composition_str)
+        $('#compositions').val(composition_str)
+        n++;
+
+        $('#composition-div-group').css('display','block');
+        $('#composition-div-group').append("<label class='col-sm-3 control-label'> </label><div class='composition-div'><div class='col-sm-2 composition_name_arr'><input class='form-control' readonly='readonly' name='composition_name_arr' value='"+composition_name+"'type='text' placeholder='Name'></div><div class='col-sm-2'><input class='form-control' readonly='readonly' name='composition_percentage_arr' value='"+composition_percentage+"'type='number' placeholder='Percentage'></div><div class='col-sm-2'><input class='form-control' readonly='readonly' name='composition_yarn_rate_arr' value='"+composition_yarn_rate+"'type='number' placeholder='Percentage'></div><div class='col-sm-2'><input class='form-control' readonly='readonly' name='composition_wastage_arr' value='"+composition_wastage+"'type='number' placeholder='Percentage'></div></div>");
+
+        order_total_yarn_weight =  Number(order_total_yarn_weight) + Number($("#order_qty_per_dzn").val()*$("#order_weight_per_dzn").val()*composition_percentage/100*(1+Number(composition_wastage/100)));
+        order_total_yarn_cost = Number(order_total_yarn_cost) + Number(Number($("#order_qty_per_dzn").val()*$("#order_weight_per_dzn").val()*composition_percentage/100*(1+Number(composition_wastage/100)))*composition_yarn_rate);
+
+        $('#order_total_yarn_weight').val(Math.round(order_total_yarn_weight));
+        $('#order_total_yarn_cost').val(Math.round(order_total_yarn_cost));
+    });
+
+    $('#composition_refresh').click(function(){
+        num_of_composition = $('.composition_name_arr').length;
+    });
+
+    $('#order_print_cost').blur(function(){
+        order_total_cost = Number($('#order_total_yarn_cost').val()) + Number($('#order_total_acc_cost').val()) + Number($('#order_total_btn_cost').val()) + Number($('#order_total_zipper_cost').val()) + Number($('#order_total_print_cost').val());
+        $('#order_total_cost').val(Math.round(order_total_cost));
+
+        order_balance_amount = $("#order_total_fob").val() - $("#order_total_cost").val();
+        $("#order_balance_amount").val(Math.round(order_balance_amount));
+
+        cost_of_making = order_balance_amount/$("#order_qty_per_dzn").val();
+        $("#order_order_order_order_cost_of_making").val(Math.round(order_cost_of_making));
     });
 }
 

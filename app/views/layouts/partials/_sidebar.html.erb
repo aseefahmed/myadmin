@@ -2,26 +2,58 @@
   <ul class="nav nav-tabs">
     <li class="active"><a href="#tab_br1" data-toggle="tab">New Orders</a></li>
     <li><a href="#tab_br2" data-toggle="tab">Inactive Orders</a></li>
-    <li><a href="#tab_br3" data-toggle="tab">Requisitions</a></li>
+    <li><a href="#tab_br3" data-toggle="tab">Orders Delivered</a></li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="tab_br1">
-      <p>
-        <% get_new_orders.each do |order|  %>
-            <i class="splashy-arrow_state_blue_right hint--left hint--warning" data-hint="Lorem ipsum dolor sit..."></i> <%= order.buyer.buyer_name  %><br>
-
-        <% end %>
+      <p><% total_new_orders = get_new_orders.count %>
+      <ul class="list-group">
+        <% if total_new_orders == 0 %>
+            <li class="list-group-item">
+              <i class="splashy-error_x"></i> No records found.
+            </li>
+         <% else%>
+            <% get_inactive_orders.each do |order|  %>
+                  <li class="list-group-item">
+                    <button class="btn btn-gebo"><i class="splashy-arrow_large_right_outline"></i></i></button> <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                   </li>
+            <% end %>
+         <% end %>
+      </ul>
       </p>
     </div>
     <div class="tab-pane" id="tab_br2">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+      <p><% total_new_orders = get_new_orders.count %>
+      <ul class="list-group">
+        <% if total_new_orders == 0 %>
+            <li class="list-group-item">
+              <i class="splashy-error_x"></i> No records found.
+            </li>
+        <% else%>
+            <% get_new_orders.each do |order|  %>
+                <li class="list-group-item">
+                  <button class="btn btn-gebo"><i class="splashy-arrow_large_right_outline"></i></i></button> <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                </li>
+            <% end %>
+        <% end %>
+      </ul>
       </p>
     </div>
     <div class="tab-pane" id="tab_br3">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+      <p><% total_new_orders = get_new_orders.count %>
+      <ul class="list-group">
+        <% if total_new_orders == 0 %>
+            <li class="list-group-item">
+              <i class="splashy-error_x"></i> No records found.
+            </li>
+        <% else%>
+            <% get_delivered_orders.each do |order|  %>
+                <li class="list-group-item">
+                  <button class="btn btn-gebo"><i class="splashy-arrow_large_right_outline"></i></i></button> <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                </li>
+            <% end %>
+        <% end %>
+      </ul>
       </p>
     </div>
   </div>

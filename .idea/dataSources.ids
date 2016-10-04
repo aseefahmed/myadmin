@@ -528,8 +528,8 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>23877</introspection-state-number>
-        <introspection-timestamp>2016-10-04.11:51:17.074</introspection-timestamp>
+        <introspection-state-number>23971</introspection-state-number>
+        <introspection-timestamp>2016-10-04.18:09:46.692</introspection-timestamp>
       </schema>
       <schema id="3" parent="1" name="pg_catalog">
         <object-id>11</object-id>
@@ -583,7 +583,7 @@
       </table>
       <table id="15" parent="2" name="orders">
         <object-id>36726</object-id>
-        <state-number>23858</state-number>
+        <state-number>23971</state-number>
       </table>
       <table id="16" parent="2" name="product_styles">
         <object-id>36882</object-id>
@@ -21596,8 +21596,8 @@
         <data-type>double precision</data-type>
       </column>
       <column id="3772" parent="15" name="compositions">
-        <state-number>22569</state-number>
-        <data-type>double precision</data-type>
+        <state-number>23971</state-number>
+        <data-type>varchar(555)</data-type>
       </column>
       <column id="3773" parent="15" name="approved_yarn_amount">
         <state-number>22569</state-number>

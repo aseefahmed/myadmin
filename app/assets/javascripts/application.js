@@ -98,7 +98,8 @@ ready = function(){
     order_total_yarn_cost = 0;
     compositions = new Array()
     n=0;
-    $('#composition_plus').click(function(){
+    $('#composition_plus').click(function(evt){
+        evt.stopImmediatePropagation();
         composition_name = $('#composition_name').val();
         composition_percentage = $('#composition_percentage').val();
         composition_yarn_rate = $('#composition_yarn_rate').val();
@@ -106,12 +107,11 @@ ready = function(){
         compositions[n] = [composition_name, composition_percentage, composition_yarn_rate, composition_wastage];
 
         composition_str = JSON.stringify(compositions);
-        alert(composition_str)
         $('#compositions').val(composition_str)
         n++;
 
         $('#composition-div-group').css('display','block');
-        $('#composition-div-group').append("<label class='col-sm-3 control-label'> </label><div class='composition-div'><div class='col-sm-2 composition_name_arr'><input class='form-control' readonly='readonly' name='composition_name_arr' value='"+composition_name+"'type='text' placeholder='Name'></div><div class='col-sm-2'><input class='form-control' readonly='readonly' name='composition_percentage_arr' value='"+composition_percentage+"'type='number' placeholder='Percentage'></div><div class='col-sm-2'><input class='form-control' readonly='readonly' name='composition_yarn_rate_arr' value='"+composition_yarn_rate+"'type='number' placeholder='Percentage'></div><div class='col-sm-2'><input class='form-control' readonly='readonly' name='composition_wastage_arr' value='"+composition_wastage+"'type='number' placeholder='Percentage'></div></div>");
+        $('#composition-div-group').append("<div class='composition-div'><div class='col-sm-3 composition_name_arr'><input class='form-control' readonly='readonly' name='composition_name_arr' value='"+composition_name+"'type='text' placeholder='Name'></div><div class='col-sm-3'><input class='form-control' readonly='readonly' name='composition_percentage_arr' value='"+composition_percentage+"'type='number' placeholder='Percentage'></div><div class='col-sm-2'><input class='form-control' readonly='readonly' name='composition_yarn_rate_arr' value='"+composition_yarn_rate+"'type='number' placeholder='Percentage'></div><div class='col-sm-2'><input class='form-control' readonly='readonly' name='composition_wastage_arr' value='"+composition_wastage+"'type='number' placeholder='Percentage'></div></div>");
 
         order_total_yarn_weight =  Number(order_total_yarn_weight) + Number($("#order_qty_per_dzn").val()*$("#order_weight_per_dzn").val()*composition_percentage/100*(1+Number(composition_wastage/100)));
         order_total_yarn_cost = Number(order_total_yarn_cost) + Number(Number($("#order_qty_per_dzn").val()*$("#order_weight_per_dzn").val()*composition_percentage/100*(1+Number(composition_wastage/100)))*composition_yarn_rate);

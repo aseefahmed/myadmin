@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004054916) do
+ActiveRecord::Schema.define(version: 20161004120815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20161004054916) do
     t.float    "total_cost"
     t.float    "balance_amount"
     t.float    "cost_of_making"
-    t.float    "compositions"
+    t.string   "compositions",           limit: 555
     t.float    "approved_yarn_amount"
     t.float    "approved_acc_amount"
     t.float    "approved_btn_amount"

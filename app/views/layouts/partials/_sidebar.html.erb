@@ -1,0 +1,28 @@
+<div class="tabbable tabbable-bordered">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab_br1" data-toggle="tab">New Orders</a></li>
+    <li><a href="#tab_br2" data-toggle="tab">Inactive Orders</a></li>
+    <li><a href="#tab_br3" data-toggle="tab">Requisitions</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab_br1">
+      <p>
+        <% get_new_orders.each do |order|  %>
+            <i class="splashy-arrow_state_blue_right hint--left hint--warning" data-hint="Lorem ipsum dolor sit..."></i> <%= order.buyer.buyer_name  %><br>
+
+        <% end %>
+      </p>
+    </div>
+    <div class="tab-pane" id="tab_br2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+      </p>
+    </div>
+    <div class="tab-pane" id="tab_br3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tellus felis, sit amet interdum tellus. Suspendisse sit amet scelerisque dui. Vivamus faucibus magna quis augue venenatis ullamcorper. Proin eget mauris eget orci lobortis luctus ac a sem. Curabitur feugiat, eros consectetur egestas iaculis,
+      </p>
+    </div>
+  </div>
+</div>

@@ -34,11 +34,11 @@
           </thead>
           <tbody>
           <% i = 0 %>
-          <% @styles.each do |style| %>
+          <% @product_styles.each do |style| %>
               <% i = i+1 %>
               <tr>
                 <td><%= i  %></td>
-                <td><%= image_tag("uploads/styles/#{style.id}/thumb/#{style.image_file_name}")  %></td>
+                <td><%= image_tag("uploads/product_styles/#{style.id}/thumb/#{style.image_file_name}")  %></td>
                 <td><%= style.style_name  %></td>
                 <td class="text-center">
                   <a class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
@@ -62,7 +62,7 @@
         <h3 class="modal-title">Add Style</h3>
       </div>
       <div class="modal-body">
-        <%= form_for @newstyles, url: {action: "create"}, html: {multipart: true} do |f| %>
+        <%= form_for @new_product_styles, url: {action: "create"}, html: {multipart: true} do |f| %>
             <div class="formSep">
               <div class="row">
                 <div class="col-sm-12">

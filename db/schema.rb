@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003094406) do
+ActiveRecord::Schema.define(version: 20161004054916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20161003094406) do
     t.integer  "supplier"
     t.integer  "brand"
     t.integer  "agent"
-    t.integer  "buyer"
+    t.integer  "buyer_id"
     t.integer  "lc_confirmed"
     t.string   "lc_doc",                 limit: 125
     t.string   "photo",                  limit: 55,  default: "no_image.png"
@@ -82,14 +82,10 @@ ActiveRecord::Schema.define(version: 20161003094406) do
     t.float    "approved_print_amount"
     t.datetime "created_at",                                                  null: false
     t.datetime "updated_at",                                                  null: false
+    t.integer  "product_style_id"
   end
 
-  create_table "recipes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "styles", force: :cascade do |t|
+  create_table "product_styles", force: :cascade do |t|
     t.string   "style_name"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -97,6 +93,11 @@ ActiveRecord::Schema.define(version: 20161003094406) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "suppliers", force: :cascade do |t|

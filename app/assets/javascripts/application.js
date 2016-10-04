@@ -22,6 +22,7 @@
 //= require lib/datatables/jquery.dataTables.bootstrap.min
 //= require lib/select2/select2
 //= require lib/fileinput/fileinput.min
+//= require lib/jquery.inputmask/dist/jquery.inputmask.bundle.min
 //= require_self
 
 var ready;
@@ -36,7 +37,9 @@ ready = function(){
         ]
     });
 
-    $('.s1').select2();
+    $('.select2js').select2();
+
+    $('.inputmaskjs').inputmask("mm/dd/yyyy");
 
     $('.file-upload').fileinput({
         showUpload: false,

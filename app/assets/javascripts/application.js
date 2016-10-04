@@ -107,7 +107,7 @@ ready = function(){
         compositions[n] = [composition_name, composition_percentage, composition_yarn_rate, composition_wastage];
 
         composition_str = JSON.stringify(compositions);
-        $('#compositions').val(composition_str)
+        $('#order_compositions').val(composition_str)
         n++;
 
         $('#composition-div-group').css('display','block');

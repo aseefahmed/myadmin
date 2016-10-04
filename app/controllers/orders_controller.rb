@@ -21,7 +21,8 @@ class OrdersController < ApplicationController
                                     :buyer_id, :product_style_id, :order_date, :delivery_date,
                                     :gg, :qty, :fob, :compositions,
                                     :weight_per_dzn, :qty_per_dzn, :total_yarn_weight, :total_yarn_cost,
-                                    :acc_rate, :total_acc_cost, :btn_cost, :total_btn_cost, :zipper_cost, :total_zipper_cost, :print_cost, :total_print_cost
+                                    :acc_rate, :total_acc_cost, :btn_cost, :total_btn_cost, :zipper_cost, :total_zipper_cost, :print_cost, :total_print_cost,
+                                    :total_fob, :total_cost, :balance_amount, :cost_of_making
                                  )
   end
 end

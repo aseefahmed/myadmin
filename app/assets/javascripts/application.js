@@ -132,7 +132,7 @@ ready = function(){
         $("#order_balance_amount").val(Math.round(order_balance_amount));
 
         cost_of_making = order_balance_amount/$("#order_qty_per_dzn").val();
-        $("#order_order_order_order_cost_of_making").val(Math.round(order_cost_of_making));
+        $("#order_cost_of_making").val(Math.round(order_cost_of_making));
     });
 }
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004120815) do
+ActiveRecord::Schema.define(version: 20161006060541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,6 +98,31 @@ ActiveRecord::Schema.define(version: 20161004120815) do
   create_table "recipes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "requisition_items", force: :cascade do |t|
+    t.string   "items_val"
+    t.integer  "requisition_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "requisition_types", force: :cascade do |t|
+    t.string   "requisition_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "requisitions", force: :cascade do |t|
+    t.string   "requisition_type_id"
+    t.string   "name"
+    t.integer  "forwarded_to"
+    t.integer  "sender_id"
+    t.float    "requested_amount"
+    t.float    "approved_amount"
+    t.boolean  "flag"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "suppliers", force: :cascade do |t|

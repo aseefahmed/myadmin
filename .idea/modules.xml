@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/myadmin.iml" filepath="$PROJECT_DIR$/.idea/myadmin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/myadmin-new.iml" filepath="$PROJECT_DIR$/.idea/myadmin-new.iml" />
     </modules>
   </component>
 </project>

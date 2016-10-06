@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-6">
-    <a class="btn btn-success" data-toggle="modal" data-backdrop="static" href="#add-modal"><i class="glyphicon glyphicon-plus"></i> Add Order</a>
+    <a class="btn btn-success" data-toggle="modal" data-backdrop="static" href="#add-modal"><i class="fa fa-plus"></i> Add Order</a>
   </div>
 </div>
 
@@ -8,7 +8,7 @@
   <% if !flash[:notice].blank? %>
       <div class="alert alert-success alert-dismissable">
         <a class="close" data-dismiss="alert">x</a>
-        <i class="glyphicon glyphicon-info-sign"></i> <%= flash[:notice]  %>
+        <i class="fa fa-info-circle"></i> <%= flash[:notice]  %>
       </div>
   <% end %>
 </div>
@@ -41,15 +41,15 @@
               <% i = i+1 %>
               <tr>
                 <td><%= i  %></td>
-                <td><%= image_tag("uploads/product_styles/#{order.product_style}/thumb/#{order.product_style}")  %></td>
-                <td><%= order.buyer  %></td>
+                <td><img src="images/uploads/product_styles/<%= order.product_style.id %>/thumb/<%= order.product_style.image_file_name %>"></td>
+                <td><%= order.buyer.buyer_name  %></td>
                 <td><%= order.delivery_date  %></td>
                 <td><%= order.qty  %></td>
                 <td><%= number_to_currency(order.fob) %></td>
                 <td class="text-center">
-                  <a class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
-                  <a class="btn btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                  <a class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                  <a class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                  <a class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                  <a class="btn btn-danger"><i class="fa fa-times"></i></a>
                 </td>
               </tr>
           <% end %>
@@ -133,8 +133,8 @@
                   <input class="form-control" name="composition_wastage" id="composition_wastage" type="number" placeholder="Wastage">
                 </div>
                 <div class="col-sm-2">
-                  <a class="btn btn-success" id="composition_plus"><i class="glyphicon glyphicon-plus"></i></a>
-                  <a class="btn btn-primary" id="composition_refresh"><i class="glyphicon glyphicon-refresh"></i></a>
+                  <a class="btn btn-success" id="composition_plus"><i class="fa fa-plus"></i></a>
+                  <a class="btn btn-primary" id="composition_refresh"><i class="fa fa-refresh"></i></a>
                 </div>
                 <div id="composition-div-group">
               </div>

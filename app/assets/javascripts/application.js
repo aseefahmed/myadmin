@@ -23,18 +23,18 @@
 //= require lib/select2/select2
 //= require lib/fileinput/fileinput.min
 //= require lib/jquery.inputmask/dist/jquery.inputmask.bundle.min
+//= require react
+//= require react_ujs
+//= require components
 //= require_self
 
 var ready;
 ready = function(){
     $('#data-table').dataTable({
         "bDestroy": true,
-        "sPaginationType": "bootstrap",
-        dom: 'Bfrtip',
-        "sDom": "<'row'<'col-sm-4'l><'col-sm-4 text-right'T><'col-sm-4'f>r>t<'row'<'col-sm-5'i><'col-sm-7'p>>",
-        buttons: [
-            'copy', 'excel', 'pdf'
-        ]
+        "sPaginationType": "bootstrap_alt",
+        "sDom": "<'row'<'col-sm-6'<'dt_actions'>l><'col-sm-6'f>r>t<'row'<'col-sm-5'i><'col-sm-7'p>>",
+        
     });
 
     $('.select2js').select2();
@@ -138,4 +138,5 @@ ready = function(){
 
 $(document).ready(ready);
 $(document).on('turbolinks:load', ready);
+
 

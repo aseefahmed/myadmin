@@ -1,8 +1,11 @@
+<div class="w-box-header">
+  <h3>Orders Activities</h3>
+</div>
 <div class="tabbable tabbable-bordered">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab_br1" data-toggle="tab">New Orders</a></li>
-    <li><a href="#tab_br2" data-toggle="tab">Inactive Orders</a></li>
-    <li><a href="#tab_br3" data-toggle="tab">Orders Delivered</a></li>
+    <li class="active"><a href="#tab_br1" data-toggle="tab">New</a></li>
+    <li><a href="#tab_br2" data-toggle="tab">Inactive</a></li>
+    <li><a href="#tab_br3" data-toggle="tab">Delivered</a></li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="tab_br1">
@@ -10,12 +13,26 @@
       <ul class="list-group">
         <% if total_new_orders == 0 %>
             <li class="list-group-item">
-              <i class="splashy-error_x"></i> No records found.
+              <div class="row">
+                <div class="col-sm-2">
+                  <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                </div>
+                <div class="col-sm-10">
+                  No data found.
+                </div>
+              </div>
             </li>
          <% else%>
             <% get_inactive_orders.each do |order|  %>
                   <li class="list-group-item">
-                    <button class="btn btn-gebo"><i class="splashy-arrow_large_right_outline"></i></i></button> <code>Aseef:</code>  ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                    <div class="row">
+                      <div class="col-sm-2">
+                        <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                      </div>
+                      <div class="col-sm-10">
+                        <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                      </div>
+                    </div>
                    </li>
             <% end %>
          <% end %>
@@ -27,12 +44,26 @@
       <ul class="list-group">
         <% if total_new_orders == 0 %>
             <li class="list-group-item">
-              <i class="splashy-error_x"></i> No records found.
+              <div class="row">
+                <div class="col-sm-2">
+                  <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                </div>
+                <div class="col-sm-10">
+                  No data found.
+                </div>
+              </div>
             </li>
         <% else%>
             <% get_new_orders.each do |order|  %>
                 <li class="list-group-item">
-                  <button class="btn btn-gebo"><i class="splashy-arrow_large_right_outline"></i></i></button> <code>Saeef:</code>  ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                    </div>
+                    <div class="col-sm-10">
+                      <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                    </div>
+                  </div>
                 </li>
             <% end %>
         <% end %>
@@ -44,12 +75,26 @@
       <ul class="list-group">
         <% if total_new_orders == 0 %>
             <li class="list-group-item">
-              <i class="splashy-error_x"></i> No records found.
+              <div class="row">
+                <div class="col-sm-2">
+                  <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                </div>
+                <div class="col-sm-10">
+                  No data found.
+                </div>
+              </div>
             </li>
         <% else%>
             <% get_delivered_orders.each do |order|  %>
                 <li class="list-group-item">
-                  <button class="btn btn-gebo"><i class="splashy-arrow_large_right_outline"></i></i></button> <code>fdas:</code>  ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                    </div>
+                    <div class="col-sm-10">
+                      <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                    </div>
+                  </div>
                 </li>
             <% end %>
         <% end %>

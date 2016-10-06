@@ -13,12 +13,26 @@
       <ul class="list-group">
         <% if total_new_orders == 0 %>
             <li class="list-group-item">
-              <i class="splashy-error_x"></i> No records found.
+              <div class="row">
+                <div class="col-sm-2">
+                  <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                </div>
+                <div class="col-sm-10">
+                  No data found.
+                </div>
+              </div>
             </li>
          <% else%>
             <% get_inactive_orders.each do |order|  %>
                   <li class="list-group-item">
-                    <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button> <code>Buyer: </code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                    <div class="row">
+                      <div class="col-sm-2">
+                        <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                      </div>
+                      <div class="col-sm-10">
+                        <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                      </div>
+                    </div>
                    </li>
             <% end %>
          <% end %>
@@ -30,12 +44,26 @@
       <ul class="list-group">
         <% if total_new_orders == 0 %>
             <li class="list-group-item">
-              <i class="splashy-error_x"></i> No records found.
+              <div class="row">
+                <div class="col-sm-2">
+                  <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                </div>
+                <div class="col-sm-10">
+                  No data found.
+                </div>
+              </div>
             </li>
         <% else%>
             <% get_new_orders.each do |order|  %>
                 <li class="list-group-item">
-                  <button class="btn btn-gebo"><i class="sfa-asterisk"></i></i></button> <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                    </div>
+                    <div class="col-sm-10">
+                      <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                    </div>
+                  </div>
                 </li>
             <% end %>
         <% end %>
@@ -47,12 +75,26 @@
       <ul class="list-group">
         <% if total_new_orders == 0 %>
             <li class="list-group-item">
-              <i class="splashy-error_x"></i> No records found.
+              <div class="row">
+                <div class="col-sm-2">
+                  <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                </div>
+                <div class="col-sm-10">
+                  No data found.
+                </div>
+              </div>
             </li>
         <% else%>
             <% get_delivered_orders.each do |order|  %>
                 <li class="list-group-item">
-                  <button class="btn btn-gebo"><i class="fa-asterisk"></i></i></button> <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button>
+                    </div>
+                    <div class="col-sm-10">
+                      <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                    </div>
+                  </div>
                 </li>
             <% end %>
         <% end %>

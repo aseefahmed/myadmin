@@ -18,7 +18,7 @@
          <% else%>
             <% get_inactive_orders.each do |order|  %>
                   <li class="list-group-item">
-                    <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button> <code>Aseef:</code>  ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                    <button class="btn btn-gebo"><i class="fa fa-asterisk"></i></i></button> <code>Buyer: </code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
                    </li>
             <% end %>
          <% end %>
@@ -35,7 +35,7 @@
         <% else%>
             <% get_new_orders.each do |order|  %>
                 <li class="list-group-item">
-                  <button class="btn btn-gebo"><i class="sfa-asterisk"></i></i></button> <code>Saeef:</code>  ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                  <button class="btn btn-gebo"><i class="sfa-asterisk"></i></i></button> <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
                 </li>
             <% end %>
         <% end %>
@@ -52,7 +52,7 @@
         <% else%>
             <% get_delivered_orders.each do |order|  %>
                 <li class="list-group-item">
-                  <button class="btn btn-gebo"><i class="fa-asterisk"></i></i></button> <code>fdas:</code>  ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
+                  <button class="btn btn-gebo"><i class="fa-asterisk"></i></i></button> <code>Buyer:</code> <%= order.buyer.buyer_name  %> ordered on <%= order.order_date.to_s %> for the quantity of <%= order.qty %>
                 </li>
             <% end %>
         <% end %>

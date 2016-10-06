@@ -32,9 +32,7 @@ ready = function(){
         "sPaginationType": "bootstrap",
         dom: 'Bfrtip',
         "sDom": "<'row'<'col-sm-4'l><'col-sm-4 text-right'T><'col-sm-4'f>r>t<'row'<'col-sm-5'i><'col-sm-7'p>>",
-        buttons: [
-            'copy', 'excel', 'pdf'
-        ]
+
     });
 
     $('.select2js').select2();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="Rails myadmin: test" uuid="d7cddae3-937c-4fa7-b27c-beb516d19ff8">
+  <data-source name="Rails myadmin: test" uuid="98b87bb9-c333-4724-992a-53b173608752">
     <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
@@ -11,7 +11,7 @@
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
         <introspection-state-number>22588</introspection-state-number>
-        <introspection-timestamp>2016-10-04.09:36:26.454</introspection-timestamp>
+        <introspection-timestamp>2016-10-06.08:58:46.697</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="agents_id_seq">
         <object-id>36779</object-id>
@@ -515,10 +515,7 @@
       </key>
     </database-model>
   </data-source>
-  <data-source name="Rails myadmin: production" uuid="828dccaa-36fb-42a7-aa9e-a912cc5fe1a0">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-  <data-source name="Rails myadmin: development" uuid="d74156b9-2a77-4139-8295-294e9498fc1f">
+  <data-source name="Rails myadmin: development" uuid="e9d22289-30e6-4132-b60d-055389d98f38">
     <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
@@ -529,13 +526,13 @@
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
         <introspection-state-number>23971</introspection-state-number>
-        <introspection-timestamp>2016-10-04.18:09:46.692</introspection-timestamp>
+        <introspection-timestamp>2016-10-06.08:58:41.569</introspection-timestamp>
       </schema>
       <schema id="3" parent="1" name="pg_catalog">
         <object-id>11</object-id>
         <comment>system catalog schema</comment>
         <introspection-state-number>937</introspection-state-number>
-        <introspection-timestamp>2016-10-04.09:36:26.622</introspection-timestamp>
+        <introspection-timestamp>2016-10-06.08:58:42.057</introspection-timestamp>
       </schema>
       <sequence id="4" parent="2" name="agents_id_seq">
         <object-id>36691</object-id>
@@ -59714,5 +59711,8 @@ umserver</columns>
         <data-type>xml[]</data-type>
       </argument>
     </database-model>
+  </data-source>
+  <data-source name="Rails myadmin: production" uuid="7029f78d-a545-48a7-95e5-3f439e9bec7f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
 </component>

@@ -41,8 +41,8 @@
               <% i = i+1 %>
               <tr>
                 <td><%= i  %></td>
-                <td><%= image_tag("uploads/product_styles/#{order.product_style.id}/thumb/#{order.product_style.image_file_name}")  %></td>
-                <td><%= order.buyer.buyer_name  %></td>
+                <td><%= image_tag("uploads/product_styles/#{order.product_style}/thumb/#{order.product_style}")  %></td>
+                <td><%= order.buyer  %></td>
                 <td><%= order.delivery_date  %></td>
                 <td><%= order.qty  %></td>
                 <td><%= number_to_currency(order.fob) %></td>

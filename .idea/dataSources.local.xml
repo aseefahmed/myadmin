@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails myadmin: test" uuid="d7cddae3-937c-4fa7-b27c-beb516d19ff8">
+    <data-source name="Rails myadmin: test" uuid="98b87bb9-c333-4724-992a-53b173608752">
       <user-name>asa-wtag</user-name>
-      <user-password>df9edf9fdf9ddf99</user-password>
+      <user-password>dfcbdfd9dfcfdfcfdfccdfcbdfc2dfc7dfcfdfce</user-password>
     </data-source>
-    <data-source name="Rails myadmin: production" uuid="828dccaa-36fb-42a7-aa9e-a912cc5fe1a0">
-      <user-name>flwbcvxgnfcyuj</user-name>
-      <user-password>dfd2dffddf9cdfc2dfe3dfc5dfe7dfdadfdfdf92dfccdf87dffddf87dff5df87dfe2df99df9bdf9ddfe8dfcfdfc1dffcdfdedff2</user-password>
-    </data-source>
-    <data-source name="Rails myadmin: development" uuid="d74156b9-2a77-4139-8295-294e9498fc1f">
+    <data-source name="Rails myadmin: development" uuid="e9d22289-30e6-4132-b60d-055389d98f38">
       <user-name>asa-wtag</user-name>
       <user-password>df9edf9fdf9ddf99</user-password>
       <schema-pattern>myadmin_development.pg_catalog myadmin_development.public</schema-pattern>
       <default-schemas>myadmin_development.public</default-schemas>
+    </data-source>
+    <data-source name="Rails myadmin: production" uuid="7029f78d-a545-48a7-95e5-3f439e9bec7f">
+      <user-name>flwbcvxgnfcyuj</user-name>
+      <user-password>dfd2dffddf9cdfc2dfe3dfc5dfe7dfdadfdfdf92dfccdf87dffddf87dff5df87dfe2df99df9bdf9ddfe8dfcfdfc1dffcdfdedff2</user-password>
     </data-source>
   </component>
 </project>

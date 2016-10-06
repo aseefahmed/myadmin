@@ -13,8 +13,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: asa-wtag
-  password: 4573
+  username: aseefahmed
+  password: aseefahmed
   host: localhost
 
 development:

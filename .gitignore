@@ -4,6 +4,7 @@
 
 # Ignore all logfiles and tempfiles.
 /.idea
+/app/assets/images/uploads
 /log/*
 !/log/.keep
 /config/database.yml

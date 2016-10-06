@@ -23,6 +23,9 @@
 //= require lib/select2/select2
 //= require lib/fileinput/fileinput.min
 //= require lib/jquery.inputmask/dist/jquery.inputmask.bundle.min
+//= require react
+//= require react_ujs
+//= require components
 //= require_self
 
 var ready;
@@ -136,4 +139,5 @@ ready = function(){
 
 $(document).ready(ready);
 $(document).on('turbolinks:load', ready);
+
 

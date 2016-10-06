@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-6">
-    <a class="btn btn-success" data-toggle="modal" data-backdrop="static" href="#add-modal"><i class="glyphicon glyphicon-plus"></i> Add Buyer</a>
+    <a class="btn btn-success" data-toggle="modal" data-backdrop="static" href="#add-modal"><i class="fa fa-plus"></i> Add Buyer</a>
   </div>
 </div>
 
@@ -41,9 +41,9 @@
                 <td><%= image_tag("uploads/buyers/#{buyer.id}/thumb/#{buyer.image_file_name}")  %></td>
                 <td><%= buyer.buyer_name  %></td>
                 <td class="text-center">
-                  <a class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
-                  <a class="btn btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                  <a class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                  <a class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                  <a class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                  <a class="btn btn-danger"><i class="fa fa-times"></i></a>
                 </td>
               </tr>
           <% end %>

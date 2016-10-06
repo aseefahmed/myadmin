@@ -100,6 +100,16 @@ ActiveRecord::Schema.define(version: 20161004120815) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "styles", force: :cascade do |t|
+    t.string   "style_name"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
   create_table "suppliers", force: :cascade do |t|
     t.text     "description"
     t.string   "supplier_name"

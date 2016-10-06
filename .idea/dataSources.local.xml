@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails myadmin: development" uuid="2f782c35-8707-47e0-a411-bccc17beb3d7">
+    <data-source name="Rails myadmin: test" uuid="bc854a35-4894-4758-9c99-8233ee3ba754">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>aseefahmed</user-name>
+      <user-password>dfcbdfd9dfcfdfcfdfccdfcbdfc2dfc7dfcfdfce</user-password>
+      <introspection-scope>myadmin_test:public,pg_catalog,aseefahmed</introspection-scope>
+      <resolve-scope>myadmin_test:public,aseefahmed</resolve-scope>
+    </data-source>
+    <data-source name="Rails myadmin: production" uuid="e8eef510-0e66-4c2c-af04-c6f4c03ed155">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <first-sync>true</first-sync>
       <user-name>aseefahmed</user-name>
-      <user-password>dfcbdfd9dfcfdfcfdfccdfcbdfc2dfc7dfcfdfce</user-password>
-    </data-source>
-<<<<<<< HEAD
-    <data-source name="Rails myadmin: production" uuid="5a5aabc8-4c33-4aac-abf0-3c551fe4db0e">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-=======
-    <data-source name="Rails myadmin: production" uuid="828dccaa-36fb-42a7-aa9e-a912cc5fe1a0">
->>>>>>> 559cbbb5821d8dedea5b19eb921a949b7c0a60af
-      <user-name>flwbcvxgnfcyuj</user-name>
       <user-password>dfd2dffddf9cdfc2dfe3dfc5dfe7dfdadfdfdf92dfccdf87dffddf87dff5df87dfe2df99df9bdf9ddfe8dfcfdfc1dffcdfdedff2</user-password>
     </data-source>
-    <data-source name="Rails myadmin: test" uuid="fb4807f6-df78-414e-8848-1ce1536d4ecf">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    <data-source name="Rails myadmin: development" uuid="f7d3b866-2c27-4aa9-b18c-5a568bfad284">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>aseefahmed</user-name>
       <user-password>dfcbdfd9dfcfdfcfdfccdfcbdfc2dfc7dfcfdfce</user-password>
+      <introspection-scope>myadmin_development:public,pg_catalog,aseefahmed</introspection-scope>
+      <resolve-scope>myadmin_development:public,aseefahmed</resolve-scope>
     </data-source>
   </component>
 </project>

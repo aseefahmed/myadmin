@@ -1,64 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Rails myadmin: development" uuid="2f782c35-8707-47e0-a411-bccc17beb3d7">
+    <data-source source="LOCAL" name="Rails myadmin: test" uuid="bc854a35-4894-4758-9c99-8233ee3ba754">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-<<<<<<< HEAD
-      <jdbc-url>jdbc:postgresql://127.0.0.1/myadmin_development</jdbc-url>
-=======
       <jdbc-url>jdbc:postgresql://127.0.0.1/myadmin_test</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-driver-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-9.4-1201.jdbc4.jar</url>
-        </library>
-      </libraries>
->>>>>>> 559cbbb5821d8dedea5b19eb921a949b7c0a60af
     </data-source>
-    <data-source source="LOCAL" name="Rails myadmin: production" uuid="5a5aabc8-4c33-4aac-abf0-3c551fe4db0e">
+    <data-source source="LOCAL" name="Rails myadmin: production" uuid="e8eef510-0e66-4c2c-af04-c6f4c03ed155">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/d3jhu2mp8g461m</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-driver-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-9.4-1201.jdbc4.jar</url>
-        </library>
-      </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails myadmin: test" uuid="fb4807f6-df78-414e-8848-1ce1536d4ecf">
+    <data-source source="LOCAL" name="Rails myadmin: development" uuid="f7d3b866-2c27-4aa9-b18c-5a568bfad284">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-<<<<<<< HEAD
-      <jdbc-url>jdbc:postgresql://127.0.0.1/myadmin_test</jdbc-url>
-=======
       <jdbc-url>jdbc:postgresql://127.0.0.1/myadmin_development</jdbc-url>
-      <explain-plan-config>
-        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
-      </explain-plan-config>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-driver-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-9.4-1201.jdbc4.jar</url>
-        </library>
-      </libraries>
->>>>>>> 559cbbb5821d8dedea5b19eb921a949b7c0a60af
     </data-source>
   </component>
 </project>

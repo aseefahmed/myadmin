@@ -1,0 +1,2 @@
+class RequisitionItemsController < ApplicationController
+end

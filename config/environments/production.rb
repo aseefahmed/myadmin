@@ -32,7 +32,7 @@ Rails.application.configure do
   config.assets.compile = true
   config.serve_static_assets = true
   Rails.application.config.assets.version = '1.0'
-  Rails.application.config.assets.precompile += %w( uploads/ )
+  Rails.application.config.assets.precompile += %w( uploads/* )
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true

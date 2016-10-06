@@ -71,7 +71,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <label>Requisition Type </label>
-                  <%= f.collection_select(:name, RequisitionType.all, :id, :requisition_type, {}, {class: "form-control"})  %>
+                  <%= f.collection_select(:requisition_type_id, RequisitionType.all, :id, :requisition_type, {}, {class: "form-control"})  %>
                 </div>
               </div>
             </div>

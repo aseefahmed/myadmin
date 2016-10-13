@@ -13,6 +13,10 @@ class BrandsController < ApplicationController
     end
   end
 
+  def edit
+    @brand = Brand.find(params[:id])
+  end
+
   private
 
   def brand_params

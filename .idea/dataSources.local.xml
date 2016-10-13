@@ -13,8 +13,8 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>aseefahmed</user-name>
       <user-password>dfcbdfd9dfcfdfcfdfccdfcbdfc2dfc7dfcfdfce</user-password>
-      <introspection-scope>myadmin_development:public,pg_catalog,aseefahmed</introspection-scope>
-      <resolve-scope>myadmin_development:public,aseefahmed</resolve-scope>
+      <introspection-scope>myadmin_development:aseefahmed,pg_catalog,public</introspection-scope>
+      <resolve-scope>myadmin_development:aseefahmed,public</resolve-scope>
     </data-source>
     <data-source name="Rails myadmin-new: test" uuid="c2607a89-ac3a-42bd-99f3-01b99d96e52f">
       <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">

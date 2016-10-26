@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'react_test/index'
+  get 'react_test/task1'
   get 'requisitions/index'
 
   resources :orders

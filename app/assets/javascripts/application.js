@@ -24,9 +24,9 @@
 //= require lib/fileinput/fileinput.min
 //= require lib/jquery.inputmask/dist/jquery.inputmask.bundle.min
 //= require build/app
-// require react
-// require react_ujs
-// require components
+//= require react
+//= require react_ujs
+//= require components
 // require build/test
 //= require_self
 
@@ -144,3 +144,6 @@ $(document).ready(ready);
 $(document).on('turbolinks:load', ready);
 
 
+//= require react
+//= require react_ujs
+//= require components

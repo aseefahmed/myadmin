@@ -409,60 +409,8 @@
   </div>
   <div id="example"></div>
 </div>
-<script src="https://fb.me/react-15.0.0.js"></script>
-<script src="https://fb.me/react-dom-15.0.0.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<script type="text/babel">
-  var MyList = React.createClass({
-    getInitialState: function(){
-      return {
-        data: [
-          'apple',
-          'mango',
-          'pinapple',
-          'jackfruit',
-          'nut',
-          'passion fruit'
-        ]
-      }
-    },
-    deleteItem: function(){
-      alert('d')
-    },
-    componentWillMount: function(){
-      this.setState({
-        items: this.state.data
-      });
-    },
-    render: function(){
-      return (
-          <div>
-              <Listing items={this.state.data}/>
-          </div>
-      )
-    }
-  });
 
-  var Listing = React.createClass({
-    deleteItem: function(){
-      alert('d')
-    },
-    render: function(){
-      return (
-          <ul>
-            {
-              this.props.items.map(function(item) {
-                return <li key={item}><button className="btn btn-danger glyphicon glyphicon-trash" onclick={this.deleteItem}/> {item} </li>
-              }, bind(this))
-            }
-          </ul>
-      )
-    }
-  });
-
-  ReactDOM.render(<MyList/>, document.getElementById('react-container'))
-</script>
 </body>
 </html>
